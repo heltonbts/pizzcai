@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzçai Express | Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #1b052d;
+      --bg-2: #2b0b46;
+      --bg-3: #4d1781;
+      --card: rgba(255, 255, 255, 0.12);
+      --card-border: rgba(255, 255, 255, 0.22);
+      --text: #ffffff;
+      --muted: #e8d8ff;
+      --accent: #d67dff;
+      --accent-2: #a74dff;
+      --shadow: rgba(34, 0, 61, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(214, 125, 255, 0.28), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(167, 77, 255, 0.35), transparent 30%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2) 55%, var(--bg-3));
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(10px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    body::before {
+      width: 220px;
+      height: 220px;
+      top: 40px;
+      left: -60px;
+      background: linear-gradient(135deg, #ffffff, #d67dff);
+    }
+
+    body::after {
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      bottom: 30px;
+      background: linear-gradient(135deg, #7a1fff, #f0b6ff);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      padding: 32px 24px;
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 60px var(--shadow);
+      text-align: center;
+      animation: fadeUp 0.7s ease;
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 14px 30px rgba(167, 77, 255, 0.38);
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 26px;
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      background: linear-gradient(135deg, rgba(214, 125, 255, 0.95), rgba(122, 31, 255, 0.95));
+      box-shadow: 0 12px 24px rgba(76, 10, 129, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 16px 28px rgba(76, 10, 129, 0.35);
+      filter: brightness(1.04);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 28px 18px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .link {
+        min-height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo">PE</div>
+    <h1>Pizzçai Express</h1>
+    <p>Escolha abaixo a melhor forma de pedir e aproveitar nossas promoções.</p>
+
+    <section class="links">
+      <a class="link" href="https://chat.whatsapp.com/DfVJ6VkwF39JnIbNOpqEXt?mode=gi_t" target="_blank" rel="noopener noreferrer">
+        Comunidade de Promoções
+      </a>
+      <a class="link" href="https://wa.me/5588997129193" target="_blank" rel="noopener noreferrer">
+        Peça pelo WhatsApp
+      </a>
+      <a class="link" href="https://expresspizzcai.shop" target="_blank" rel="noopener noreferrer">
+        Peça pelo Site
+      </a>
+    </section>
+
+  </main>
+</body>
+</html>
